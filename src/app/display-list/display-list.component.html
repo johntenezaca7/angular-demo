@@ -1,0 +1,10 @@
+<div class="topic-1">
+  <h3>Display List:</h3>
+  <button class="btn" (click)="toggleList()">Toggle List!</button>
+  <div *ngIf="showList">
+    <div *ngFor="let friend of friendslist" class="friend">
+      <div>Name: {{ friend.name }}</div>
+      <div>Hobby: {{ friend.hobby }}</div>
+    </div>
+  </div>
+</div>

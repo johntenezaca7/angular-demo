@@ -1,0 +1,9 @@
+<div>
+  <h3>Passing data from parent to child:</h3>
+  <div class="btn-wrapper">
+    <button class="btn-3" (click)="sendBlueBerries()"> Send blueberries.</button>
+    <button class="btn-2" (click)="sendBlueTomatos()"> Send tomatos.</button>
+    <button class="btn-4" (click)="sendBlueBananas()"> Send bananas.</button>
+  </div>
+  <app-child [dataFromParent]="dataFromParent"></app-child>
+</div>
