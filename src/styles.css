@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: "Roboto", sans-serif;
+  background-image: url("https://blog.paulhalliday.io/content/images/2017/10/angular-2.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h3 {
   font-size: 22px;
+  margin-top: 5%;
 }
+
 .btn {
   background-color: #4e4e4e;
   border: none;
