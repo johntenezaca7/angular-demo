@@ -10,28 +10,28 @@ export class DisplayListComponent implements OnInit {
 
   friendslist = [
     {
-      name: "John",
-      hobby: "Coding"
+      name: "Jon",
+      hobby: "coding"
     },
     {
       name: "Sam",
-      hobby: "Rock climbing"
+      hobby: "rock climbing"
     },
     {
       name: "Selena",
-      hobby: "Networking"
+      hobby: "networking"
     },
     {
       name: "Polly",
-      hobby: "Shopping"
+      hobby: "shopping"
     },
     {
       name: "Seamus",
-      hobby: "Hustling"
+      hobby: "hustling"
     },
     {
       name: "Trevor",
-      hobby: "Chilling"
+      hobby: "chilling"
     }
   ];
   constructor() {}

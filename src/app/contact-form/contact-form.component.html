@@ -1,47 +1,77 @@
 <div>
   <h3>Contact Form:</h3>
   <div class="display-content">
-    <form>
-      <div>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <label for="fname">
-          <span>Name</span>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        </label>
-        <div>
-          <button class="btn">Update</button>
+    <div class="display-form">
+      <form id="contactForm" (submit)="onSubmit()" #contactInfo="ngForm">
+        <div class="half-format">
+          <label>
+            <span>First Name</span>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" class="input-label">
+            <span></span>
+          </label>
+          <label>
+            <span>Last Name</span>
+            <input type="text" id="fname" name="lastname" placeholder="Last Name" class="input-label">
+          </label>
         </div>
+        <div class="half-format">
+          <label>
+            <span>Phone Number</span>
+            <input type="text" id="fname" name="phoneNumber" placeholder="Phone Number" class="input-label">
+          </label>
+          <label>
+            <span>Email Address</span>
+            <input type="text" id="fname" name="email" placeholder="Email Address" class="input-label">
+          </label>
+        </div>
+        <label>
+          <span>Address</span>
+          <input type="text" id="fname" name="address1" placeholder="Address" class="input-label">
+        </label>
+        <div class="half-format">
+          <label>
+            <span>City</span>
+            <input type="text" id="fname" name="city" placeholder="City" class="input-label">
+          </label>
+          <label>
+            <span>State</span>
+            <input type="text" id="fname" name="state" placeholder="State" class="input-label">
+          </label>
+        </div>
+        <div class="half-format">
+          <label>
+            <span>Zip Code</span>
+            <input type="text" id="fname" name="zip" placeholder="Zip Code" class="input-label">
+          </label>
+        </div>
+        <div class="btn-wrapper">
+          <button class="btn">Update</button>
+          <button class="btn">Reset</button>
+        </div>
+      </form>
+    </div>
+    <div class="display-info">
+      <h3>Displayed Information</h3>
+      <div>
+        <dl>
+          <div class="info-block">
+            <dt>Full Name</dt>
+            <dd>Test</dd>
+          </div>
+          <div class="info-block">
+            <dt>Phone Number</dt>
+            <dd>Test</dd>
+          </div>
+          <div class="info-block">
+            <dt>Email Address</dt>
+            <dd>Test</dd>
+          </div>
+          <div class="info-block">
+            <dt>Address</dt>
+            <dd>Test</dd>
+          </div>
+        </dl>
       </div>
-    </form>
-    <div class="display-contact">
-
     </div>
   </div>
 </div>

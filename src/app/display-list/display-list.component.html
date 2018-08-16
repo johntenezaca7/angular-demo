@@ -3,8 +3,8 @@
   <button class="btn" (click)="toggleList()">Toggle List!</button>
   <div *ngIf="showList">
     <div *ngFor="let friend of friendslist" class="friend">
-      <div>Name: {{ friend.name }}</div>
-      <div>Hobby: {{ friend.hobby }}</div>
+      <div class="name">My friend {{ friend.name }}
+        <em>enjoys</em> {{ friend.hobby }}.</div>
     </div>
   </div>
 </div>
