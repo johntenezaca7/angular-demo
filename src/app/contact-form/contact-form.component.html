@@ -1,76 +1,75 @@
-<div>
-  <h3>Contact Form:</h3>
-  <div class="display-content">
-    <div class="display-form">
-      <form id="contactForm" (submit)="onSubmit()" #contactInfo="ngForm">
-        <div class="half-format">
-          <label>
-            <span>First Name</span>
-            <input type="text" id="fname" name="firstname" placeholder="First Name" class="input-label">
-            <span></span>
-          </label>
-          <label>
-            <span>Last Name</span>
-            <input type="text" id="fname" name="lastname" placeholder="Last Name" class="input-label">
-          </label>
-        </div>
-        <div class="half-format">
-          <label>
-            <span>Phone Number</span>
-            <input type="text" id="fname" name="phoneNumber" placeholder="Phone Number" class="input-label">
-          </label>
-          <label>
-            <span>Email Address</span>
-            <input type="text" id="fname" name="email" placeholder="Email Address" class="input-label">
-          </label>
-        </div>
+<h3>Contact Form:</h3>
+<div class="display-content">
+  <div class="display-form">
+    <form id="contactForm" (submit)="onSubmit()" #contactInfo="ngForm">
+      <div class="half-format">
         <label>
-          <span>Address</span>
-          <input type="text" id="fname" name="address1" placeholder="Address" class="input-label">
+          <span>First Name</span>
+          <input type="text" id="firstName" name="firstname" placeholder="First Name" [(ngModel)]="contactInformation.firstName" class="input-label"
+            required>
+          <span></span>
         </label>
-        <div class="half-format">
-          <label>
-            <span>City</span>
-            <input type="text" id="fname" name="city" placeholder="City" class="input-label">
-          </label>
-          <label>
-            <span>State</span>
-            <input type="text" id="fname" name="state" placeholder="State" class="input-label">
-          </label>
-        </div>
-        <div class="half-format">
-          <label>
-            <span>Zip Code</span>
-            <input type="text" id="fname" name="zip" placeholder="Zip Code" class="input-label">
-          </label>
-        </div>
-        <div class="btn-wrapper">
-          <button class="btn">Update</button>
-          <button class="btn">Reset</button>
-        </div>
-      </form>
+        <label>
+          <span>Last Name</span>
+          <input type="text" id="lastName" name="lastname" placeholder="Last Name" [(ngModel)]="contactInformation.lastName" class="input-label"
+            required>
+        </label>
+      </div>
+      <div class="half-format">
+        <label>
+          <span>Phone Number</span>
+          <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" [(ngModel)]="contactInformation.phoneNumber"
+            required class="input-label">
+        </label>
+        <label>
+          <span>Email Address</span>
+          <input type="text" id="email" name="email" placeholder="Email Address" [(ngModel)]="contactInformation.email" class="input-label"
+            required>
+        </label>
+      </div>
+      <label>
+        <span>Address</span>
+        <input type="text" id="address1" name="address1" placeholder="Address" [(ngModel)]="contactInformation.address.address1"
+          required class="input-label">
+      </label>
+      <div class="half-format">
+        <label>
+          <span>City</span>
+          <input type="text" id="fname" name="city" placeholder="City" [(ngModel)]="contactInformation.address.city" class="input-label"
+            required>
+        </label>
+        <label>
+          <span>State</span>
+          <input type="text" id="fname" name="state" placeholder="State" [(ngModel)]="contactInformation.address.state" class="input-label"
+            required>
+        </label>
+      </div>
+      <div class="half-format">
+        <label>
+          <span>Zip Code</span>
+          <input type="text" id="fname" name="zip" placeholder="Zip Code" [(ngModel)]="contactInformation.address.zip" class="input-label"
+            required>
+        </label>
+      </div>
+      <div class="btn-wrapper">
+        <input class="btn" type="submit" value="Update Profile" [disabled]="contactInfo.invalid">
+      </div>
+    </form>
+    <div class="btn-wrapper">
+      <input class="btn" type='text' value="Cancel" (click)="cancelSubmit()">
     </div>
-    <div class="display-info">
-      <h3>Displayed Information</h3>
+  </div>
+  <div class="display-info">
+    <h3>Displayed Information</h3>
+    <div class="contact-display" *ngIf="showDisplay">
+      <div class="full-name">{{ contactInformation.firstName }} {{ contactInformation.lastName}}</div>
       <div>
-        <dl>
-          <div class="info-block">
-            <dt>Full Name</dt>
-            <dd>Test</dd>
-          </div>
-          <div class="info-block">
-            <dt>Phone Number</dt>
-            <dd>Test</dd>
-          </div>
-          <div class="info-block">
-            <dt>Email Address</dt>
-            <dd>Test</dd>
-          </div>
-          <div class="info-block">
-            <dt>Address</dt>
-            <dd>Test</dd>
-          </div>
-        </dl>
+        <div>
+          <div>Phone Number: {{ contactInformation.phoneNumber }}</div>
+          <div>Email: {{ contactInformation.email}}</div>
+        </div>
+        <div>Address: {{ contactInformation.address.address1 }} {{ contactInformation.address.city }} {{ contactInformation.address.state
+          }} {{ contactInformation.address.zip}}</div>
       </div>
     </div>
   </div>

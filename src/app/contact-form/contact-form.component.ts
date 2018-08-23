@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./contact-form.component.css"]
 })
 export class ContactFormComponent implements OnInit {
-  contactInfo = {
+  contactInformation = {
     firstName: "",
     lastName: "",
     phoneNumber: "",
@@ -18,12 +18,29 @@ export class ContactFormComponent implements OnInit {
       zip: ""
     }
   };
+
+  showDisplay = false;
   constructor() {}
 
   ngOnInit() {}
 
   onSubmit() {
-    // console.log(f.value); // { first: '', last: '' }
-    // console.log(f.valid); // false
+    if (!this.showDisplay) {
+      this.showDisplay = true;
+    }
+  }
+  cancelSubmit() {
+    this.showDisplay = false;
+    this.contactInformation = {
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      address: {
+        address1: "",
+        city: "",
+        state: "",
+        zip: ""
+      }
   }
 }

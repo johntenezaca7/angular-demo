@@ -13,8 +13,7 @@ select {
 }
 
 input[type="submit"] {
-  width: 100%;
-  background-color: #4caf50;
+  background-color: #ff4141;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -47,10 +46,16 @@ input[type="submit"] {
 }
 
 .btn-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .btn {
-  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.full-name {
+  font-size: 35px;
+  border-bottom: 1px rgba(0, 0, 0, 0.24) solid;
 }
